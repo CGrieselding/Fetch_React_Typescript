@@ -67,12 +67,9 @@ export default class GeoWeatherAPI extends React.Component<{}, StateType> {
   render() {
     return (
       <div>
-        <h1 className="mainTitle">Geolocation App</h1>
-        <div>
-          <p>Your Latitude: {this.state.latitude}</p>
-          <p>Your Longitude: {this.state.longitude} </p>
-        </div>
         <DisplayAPI
+          lat={this.state.latitude}
+          lng={this.state.longitude}
           desc={this.state.desc}
           temp={this.state.temp}
           feel={this.state.feel}
